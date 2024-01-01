@@ -1,15 +1,14 @@
 name-template: 'v$RESOLVED_VERSION 🌈'
 tag-template: 'v$RESOLVED_VERSION'
+prerelease: true
+prerelease-identifier: b
 categories:
   - title: '💥 Breaking Changes' 
     labels:
       - 'breaking'
-      - 'API breaking changes'
-      - 'Requires DB migration'
   - title: '✨ New Features'
     labels:
       - 'new-feature'
-      - 'API changes'
   - title: '👍 Improved Features'
     labels:
       - 'feature'
@@ -33,18 +32,29 @@ categories:
       - 'dependencies'
 change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
 change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add ` to disable code blocks.
+autolabeler:
+  - label: 'chore'
+    files:
+      - '*.md'
+    branch:
+      - '/^docs?/.+/'
+  - label: 'bug'
+    branch:
+      - '/^fix\/.+/'
+    title:
+      - '/\bfix\b/i'
+  - label: 'enhancement'
+    branch:
+      - '/^feature\/.+/'
 version-resolver:
   major:
     labels:
       - 'major'
       - 'breaking'
-      - 'API breaking changes'
-      - 'Requires DB migration'
   minor:
     labels:
       - 'minor'
       - 'new-feature'
-      - 'API changes'
       - 'feature'
       - 'enhancement'
       - 'chore'
