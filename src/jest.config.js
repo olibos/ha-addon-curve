@@ -8,12 +8,16 @@ const config = {
       tsConfig: "tsconfig.jest.json"
     }]
   },
+  collectCoverage: true,
+  testResultsProcessor: "jest-sonar-reporter",
   collectCoverageFrom: [
     '**/*.{js,jsx,ts,tsx}',
+    '!**/jest.config.js',
+    '!**/*.test.{js,jsx,ts,tsx}',
+    '!**/coverage/**',
     '!**/node_modules/**',
     '!**/vendor/**',
-  ],
-  verbose: true,
+  ]
 };
 
 export default config;
