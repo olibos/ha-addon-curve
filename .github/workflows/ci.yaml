@@ -1,4 +1,5 @@
 name: CI
+
 on:
   push:
     branches:
@@ -6,9 +7,14 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
   workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   sonarcloud:
-    name: CI
+    name: SonarCloud Scan
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -24,6 +30,16 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v1
+      - name: Install dependencies
+        working-directory: src
+        run: bun install
       - name: Build
+        working-directory: src
         run: bun run build
