@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "bun index.ts",
-    "build": "bun run build.ts",
+    "build": "bun run test && bun run build.ts",
     "lint:js": "eslint --cache",
     "test": "jest"
   },
