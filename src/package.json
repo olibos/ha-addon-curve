@@ -27,7 +27,7 @@
     "supertest": "^6.3.3",
     "ts-jest": "^29.1.1"
   },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
+  "dependencies": {
+    "express": "^4.18.2"
   }
 }
