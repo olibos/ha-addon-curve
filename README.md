@@ -1,4 +1,4 @@
-# Home Assistant Add-on: Firefly iii Curve importer
+# Home Assistant Add-on: Firefly iii Curve transactions importer
 
 [![GitHub Release][releases-shield]][releases]
 ![Project Stage][project-stage-shield]
@@ -7,6 +7,7 @@
 [![Github Actions][github-actions-shield]][github-actions]
 ![Project Maintenance][maintenance-shield]
 [![GitHub Activity][commits-shield]][commits]
+[![Quality gate][quality_gate_shield]][quality_gate]
 
 Import [Curve](https://curve.com/en-gb/) transactions effortlessly into Firefly III for streamlined finance.
 
@@ -60,3 +61,5 @@ SOFTWARE.
 [releases-shield]: https://img.shields.io/github/release/olibos/ha-addon-curve.svg
 [releases]: https://github.com/olibos/ha-addon-curve/releases
 [repository]: https://github.com/olibos/ha-addon-curve
+[quality_gate_shield]: https://sonarcloud.io/api/project_badges/quality_gate?project=olibos_ha-addon-curve
+[quality_gate]: https://sonarcloud.io/summary/new_code?id=olibos_ha-addon-curve
