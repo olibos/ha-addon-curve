@@ -9,7 +9,6 @@ const config = {
     }]
   },
   collectCoverage: true,
-  testResultsProcessor: 'jest-sonar-reporter',
   collectCoverageFrom: [
     '**/*.{js,jsx,ts,tsx}',
     '!**/build.ts',
