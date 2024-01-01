@@ -13,13 +13,20 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  sonarcloud:
-    name: SonarCloud Scan
+  build:
+    name: Build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0 # Shallow clones should be disabled for a better relevancy of analysis
+      - uses: oven-sh/setup-bun@v1
+      - name: Install dependencies
+        working-directory: src
+        run: bun install
+      - name: Build
+        working-directory: src
+        run: bun run build
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         with:
@@ -30,16 +37,3 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-
-  build:
-    name: Build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: oven-sh/setup-bun@v1
-      - name: Install dependencies
-        working-directory: src
-        run: bun install
-      - name: Build
-        working-directory: src
-        run: bun run build
