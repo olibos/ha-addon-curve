@@ -61,5 +61,5 @@ SOFTWARE.
 [releases-shield]: https://img.shields.io/github/release/olibos/ha-addon-curve.svg
 [releases]: https://github.com/olibos/ha-addon-curve/releases
 [repository]: https://github.com/olibos/ha-addon-curve
-[quality_gate_shield]: https://sonarcloud.io/api/project_badges/quality_gate?project=olibos_ha-addon-curve
+[quality_gate_shield]: https://sonarcloud.io/api/project_badges/measure?project=olibos_ha-addon-curve&metric=alert_status
 [quality_gate]: https://sonarcloud.io/summary/new_code?id=olibos_ha-addon-curve
