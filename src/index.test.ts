@@ -9,5 +9,5 @@ describe('Express App', () => {
     expect(response.text).toBe(`Hello ha-addon-curve ${version}!`);
   });
 
-  afterAll(done => {app.close(done);});
+  afterAll(done => { app.close(done); });
 });
