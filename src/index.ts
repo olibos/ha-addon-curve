@@ -9,6 +9,6 @@ app.get("/", (_, res) => {
   res.send(`Hello ha-addon-curve ${version}!`);
 });
 
-app.listen(port, () => {
+export default app.listen(port, () => {
   console.log(`Listening on http://localhost:${port} ...`);
 });
