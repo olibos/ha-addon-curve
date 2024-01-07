@@ -1,0 +1,20 @@
+name: "Firefly iii - Curve"
+description: "Import Curve transactions effortlessly into Firefly III for streamlined finance."
+version: "0.1.0"
+slug: "ha-addon-curve"
+init: false
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+startup: services
+ports:
+  3000/tcp: 3474
+schema:
+  FIREFLY_III_URL: url
+  FIREFLY_III_ACCESS_TOKEN: str
+  ACCOUNTS_MAPPING:
+    - card: str
+      account: int
