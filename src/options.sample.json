@@ -1,0 +1,10 @@
+{
+    "ACCOUNTS_MAPPING": [
+        {
+            "card": "SampleCard",
+            "account": 666
+        }
+    ],
+    "FIREFLY_III_URL": "http://localhost",
+    "FIREFLY_III_ACCESS_TOKEN": "XXXXXXXXXXXXXXX"
+}

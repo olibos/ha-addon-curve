@@ -4,7 +4,7 @@ const nodeBuild = await Bun.build({
   entrypoints: ['./index.ts'],
   target: 'node',
   minify: true,
-  outdir: '../dist/',
+  outdir: '../docker/',
   naming: '[dir]/[name].m[ext]'
 });
 
