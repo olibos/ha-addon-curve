@@ -17,6 +17,24 @@ Curve's "One card to rule them all" service consolidates multiple credit and deb
 
 This add-on being developed facilitates the integration of Curve's transaction email notifications with Firefly III, a notable personal finance management tool. This project offers users the ability to effortlessly import and categorize their Curve card transactions into Firefly III, enhancing the efficiency of expense tracking. The integration ensures a seamless connection between the transaction notifications received from Curve and the comprehensive financial management capabilities of Firefly III, ultimately contributing to a more streamlined and integrated approach to personal finance within a home environment.
 
+## How it works
+
+![schema](docs/ha-addon-curve.png)
+
+When you receive a Curve Receipt email notification, a rule forwards it to a SMTP2HTTP service such as CloudMailin. The parsed email is then sent to this addon, which seamlessly identifies the corresponding card and adds or updates the transaction details in your Firefly III account.
+
+## Getting Started
+
+- Install this add-on in Home Assistant
+- Go to configuration
+![configuration](docs/configuration.png)
+- Create a free account on https://www.cloudmailin.com/
+- Add a new address:
+![smtp2http](docs/new-address.png)
+    - Set the URL of this addon
+    - Set format to JSON - Normalized
+- Configure a rul to your mailbox to forward all mails from curve to your cloudmailin address.
+
 ## Contributing
 
 I'm all about collaboration and would love for you to jump in and contribute to this project. Whether you're spotting bugs, suggesting cool new features, or just want to spruce up the docs, your input is gold. Feel free to fork the repo, make your magic in new branches, and hit me up with pull requests. Let's make this project rock together! Big thanks for your interest and all the cool stuff you bring to the table. Cheers! 🚀
@@ -57,7 +75,7 @@ SOFTWARE.
 [issue]: https://github.com/olibos/ha-addon-curve/issues
 [license-shield]: https://img.shields.io/github/license/olibos/ha-addon-curve.svg
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2024.svg
-[project-stage-shield]: https://img.shields.io/badge/Project%20Stage-Concept-red.svg
+[project-stage-shield]: https://img.shields.io/badge/Project%20Stage-Experimental-yellow.svg
 [releases-shield]: https://img.shields.io/github/release/olibos/ha-addon-curve.svg
 [releases]: https://github.com/olibos/ha-addon-curve/releases
 [repository]: https://github.com/olibos/ha-addon-curve
