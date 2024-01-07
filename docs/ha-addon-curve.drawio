@@ -1,0 +1,31 @@
+<mxfile host="app.diagrams.net" modified="2024-01-07T18:59:36.046Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="ADuO_jhInjusdrB_Si4C" version="22.1.17" type="device">
+  <diagram name="Page-1" id="7S2prEObtN6Yz88rq1rI">
+    <mxGraphModel dx="1364" dy="774" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="fK7uMPm68xQ4EmbN2764-3" value="Mail Forward&lt;br&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="fK7uMPm68xQ4EmbN2764-1" target="fK7uMPm68xQ4EmbN2764-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fK7uMPm68xQ4EmbN2764-1" value="Curve Receipt: Purchase at XXX" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#00BEF2;shape=mxgraph.azure.message;pointerEvents=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="200" width="50" height="37.5" as="geometry" />
+        </mxCell>
+        <mxCell id="fK7uMPm68xQ4EmbN2764-2" value="xxxxxxxxxxxx@cloudmailin.net" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://images.g2crowd.com/uploads/product/hd_favicon/e29498ff150afa15a1920dce9370d892/cloudmailin.svg;" vertex="1" parent="1">
+          <mxGeometry x="300" y="70" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="fK7uMPm68xQ4EmbN2764-4" value="Firefly iii API" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://www.svgviewer.dev/static-svgs/34470/firefly-iii.svg;" vertex="1" parent="1">
+          <mxGeometry x="640" y="193.75" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="fK7uMPm68xQ4EmbN2764-7" value="Add/Update Transaction&lt;br&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="fK7uMPm68xQ4EmbN2764-5" target="fK7uMPm68xQ4EmbN2764-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fK7uMPm68xQ4EmbN2764-5" value="https://ha-addon-curve/process" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/storage/Import_Export_Jobs.svg;" vertex="1" parent="1">
+          <mxGeometry x="491" y="71" width="47.76" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="fK7uMPm68xQ4EmbN2764-6" value="REST API" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.021;entryY=0.48;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="fK7uMPm68xQ4EmbN2764-2" target="fK7uMPm68xQ4EmbN2764-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
