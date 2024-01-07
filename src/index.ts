@@ -41,7 +41,7 @@ if (process.env.NODE_ENV === 'development') {
   });
 }
 
-const ExpenseExpression = /You made a purchase at:\s+(?<Name>[^\r\n]{1,100})\s*?(?<Devise>[$€£])(?<Amount>\d+(?:\.\d{0,2}))\s+(?<Date>\d{2}\s\w{1,20}\s\d{4}\s\d{2}:\d{2}:\d{2})\s+On this card:\s+(?:[^\n]+)\s+(?<CardAlias>[^\r\n]+)/;
+const ExpenseExpression = /You made a purchase at:\s+(?<Name>[^\r\n]{1,100})\s*?(?<Devise>[$€£])(?<Amount>\d+(?:\.\d{0,2}))\s+(?<Date>\d{2}\s\w{1,20}\s\d{4}\s\d{2}:\d{2}:\d{2})\s+On this card:\s+[^\n]+\s+(?<CardAlias>[^\r\n]+)/;
 app.post('/process', (req: Request<Record<string, string>, string, Notification>, res) => {
   async function process() {
     if (!req.body.headers.subject.includes('Curve Receipt: Purchase at')) {
@@ -49,7 +49,7 @@ app.post('/process', (req: Request<Record<string, string>, string, Notification>
       return;
     }
 
-    const match = req.body.plain.match(ExpenseExpression);
+    const match = ExpenseExpression.exec(req.body.plain);
     if (match?.groups === undefined) {
       console.warn('Unable to find transaction information:\n', req.body.plain);
       return;
