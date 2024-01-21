@@ -63,6 +63,7 @@ app.post('/process', (req: Request<Record<string, string>, string, Notification>
     }
 
     const transactionDate = new Date(date);
+    const name = Name?.replaceAll(/&#(\d{1,4});/g, (_, chr: number) => String.fromCharCode(chr));
     const json = JSON.stringify({ Name, Devise, Date: transactionDate, CardAlias });
     const internalReference = createHash('sha256').update(json).digest('hex');
 
@@ -88,10 +89,10 @@ app.post('/process', (req: Request<Record<string, string>, string, Notification>
             transactions: [
               {
                 type: 'withdrawal',
-                description: Name,
+                description: name,
                 amount: Amount,
                 date: transactionDate.toISOString(),
-                destination_name: Name,
+                destination_name: name,
                 source_id: accountId,
                 internal_reference: internalReference,
                 tags: ['Curve']

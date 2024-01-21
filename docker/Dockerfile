@@ -1,5 +1,4 @@
-ARG BUILD_FROM
-FROM $BUILD_FROM
+FROM ghcr.io/hassio-addons/base-nodejs:0.1.2
 
 # Copy data for add-on
 COPY index.mjs /
